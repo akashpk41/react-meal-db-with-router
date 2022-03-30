@@ -5,7 +5,7 @@ const SearchField = ({search}) => {
     <div className=" mt-5 justify-center items-center flex ">
 
       <input
-        className="border-2 rounded-xl  p-2 border-black mr-3 focus:bg-sky-100 w-2/4 focus:outline-none "
+        className="border-2 rounded-xl  p-2 border-black mr-3 focus:bg-sky-100 md:w-2/4 focus:outline-none "
         type="search"
         placeholder="Search Your Favorite Food Now"
         onChange={search}

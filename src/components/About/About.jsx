@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className=' mt-5  mx-auto w-2/4 ' id="accordion-collapse"  data-accordion="collapse">
+    <div className=' mt-5 mx-2  md:mx-auto md:w-2/4 ' id="accordion-collapse"  data-accordion="collapse">
       <h2 id="accordion-collapse-heading-1">
         <button
           type="button"

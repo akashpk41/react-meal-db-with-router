@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" mx-auto mt-5 w-2/4 ">
+    <div className=" md:mx-auto bg-black p-5 rounded-sm mt-5 mx-2 md:w-2/4 ">
       <form>
         <div class="mb-6">
           <label
