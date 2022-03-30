@@ -5,13 +5,11 @@ const MealInfo = () => {
   const { mealdb } = useParams();
 
   const [mealDetails, setMealDetails] = useState({});
-  console.log(mealDetails);
 
   useEffect(() => {
     const url = ` https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealdb}
           `;
-    console.log(url);
-
+   
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMealDetails(data.meals[0]));

@@ -3,8 +3,7 @@ import Meal from "../Meal/Meal";
 import SearchField from "../Search/SearchField";
 const Home = () => {
   const [searchText, setSearchText] = useState("");
-  console.log(searchText);
-
+  
   const [meals, setMeals] = useState([]);
   //! fetch data from mealdb api
   useEffect(() => {

@@ -3,11 +3,11 @@ import React from "react";
 const NotFound = () => {
   return (
     <div
-      class="flex md:w-2/4 mx-2 md:mx-auto  mt-5 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg items-center justify-center dark:bg-red-200 dark:text-red-800"
+      className="flex md:w-2/4 mx-2 md:mx-auto  mt-5 p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg items-center justify-center dark:bg-red-200 dark:text-red-800"
       role="alert"
     >
       <svg
-        class="inline flex-shrink-0 mr-3 w-5 h-5"
+        className="inline flex-shrink-0 mr-3 w-5 h-5"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,11 @@ const NotFound = () => {
         ></path>
       </svg>
       <div>
-        <span class="font-medium"> <span className=' text-4xl font-bold text-black mr-3 ' >404</span> Sorry ! The page you request was not found </span>
+        <span className="font-medium">
+          {" "}
+          <span className=" text-4xl font-bold text-black mr-3 ">404</span>{" "}
+          Sorry ! The page you request was not found{" "}
+        </span>
       </div>
     </div>
   );
