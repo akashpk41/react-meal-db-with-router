@@ -6,8 +6,6 @@ const Home = () => {
   console.log(searchText);
 
   const [meals, setMeals] = useState([]);
-  console.log(meals);
-
   //! fetch data from mealdb api
   useEffect(() => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
