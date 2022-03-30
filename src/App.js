@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./components/Not_Found/NotFound";
 import Foods from "./components/Foods/Foods";
 import MealInfo from "./components/Meal_Info/MealInfo";
+import Footer from "./Footer/Footer";
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
