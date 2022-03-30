@@ -1,17 +1,16 @@
 import React from "react";
 
-const SearchField = () => {
+const SearchField = ({search}) => {
   return (
     <div className=" mt-5 justify-center items-center flex ">
+
       <input
-        className="border-2 rounded-sm  p-2 border-black mr-3 focus:bg-green-200 "
-        type="text"
+        className="border-2 rounded-xl  p-2 border-black mr-3 focus:bg-sky-100 w-2/4 focus:outline-none "
+        type="search"
         placeholder="Search Your Favorite Food Now"
+        onChange={search}
       />
-      <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-5 font-bold rounded-lg ">
-        {" "}
-        Search{" "}
-      </button>
+
     </div>
   );
 };

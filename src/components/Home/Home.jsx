@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import SearchField from "../Search/SearchField";
 
 const Home = () => {
+  const [searchText, setSearchText] = useState("");
+  console.log(searchText);
+  
+  const [meals, setMeals] = useState([]);
+  //! fetch data from mealdb api
+  useEffect(() => {
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setMeals(data));
+  }, [searchText]);
+  const searchFieldText = (e) => {
+    setSearchText(e.target.value);
+  };
   return (
     <div>
       <h1 className=" mt-3  text-center text-3xl ">
         Welcome To Hungry Heros Restaurants
       </h1>
-
       {/* search field */}
-      <div className=" mt-5 justify-center items-center flex ">
-        <input
-          className="border-2 rounded-sm  p-2 border-black mr-3 focus:bg-green-200 "
-          type="text"
-          placeholder="Search Your Favorite Food Now"
-        />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-5 font-bold rounded-lg ">
-          {" "}
-          Search{" "}
-        </button>
-      </div>
+     <SearchField search={searchFieldText} />
     </div>
   );
 };
